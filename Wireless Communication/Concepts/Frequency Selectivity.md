@@ -1,0 +1,1 @@
+the transfer function of the channel varies over the bandwidth of interest

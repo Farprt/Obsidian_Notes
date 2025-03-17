@@ -1,0 +1,245 @@
+{
+  "main": {
+    "id": "2038c97ed9c88f07",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7290605bfa2518a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b84e674d58dac36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wireless Communication/Wireless Channel/Wireless Channel.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Wireless Channel"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bcacab57a3ebcc71",
+    "type": "split",
+    "children": [
+      {
+        "id": "2622abf898c938ff",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4cbdbfe859241687",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "43156ea45bd4645c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c7a324848fa03794",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 247.5
+  },
+  "right": {
+    "id": "5816c9a59db0aad4",
+    "type": "split",
+    "children": [
+      {
+        "id": "981a7be8bd54dbf0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60e1d1cb6b533c13",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "accaf04197523875",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "ede51dcaa65b7bb1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "f19de2d6a6f73dbe",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Wireless Communication/Wireless Channel/Wireless Channel.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Wireless Channel 的大纲"
+            }
+          },
+          {
+            "id": "a8f319838bebe2b7",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "c82397e91296cc25",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 610.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "c82397e91296cc25",
+  "lastOpenFiles": [
+    "Wireless Communication/Wireless Channel/EITN085-2025-A2-Fu-Wang.pdf",
+    "Convex Optimization/Convex Optimization (Stephen Boyd) (Z-Library).pdf",
+    "Wireless Communication/Concepts/Delay Dispersion.md",
+    "Wireless Communication/Concepts/Frequency Selectivity.md",
+    "Wireless Communication/Wireless Channel/Wireless Channel.md",
+    "Wireless Communication/Figure/Types of received power variations..png",
+    "[[Wide-Sense Stationary (WSS).md",
+    "Wireless Communication/Concepts/Uncorrelated Scatterers (US).md",
+    "Wireless Communication/Concepts/Wide-Sense Stationary (WSS).md",
+    "Math Concepts/AutoCorrelation Function (ACF).md",
+    "Wireless Communication/Figure/Interrelation between deterministic system functions.png",
+    "Wireless Communication/Concepts/Spreading Function.md",
+    "Wireless Communication/Concepts/Doppler-variant Impulse Response.md",
+    "Wireless Communication/Concepts/Doppler-variant Transfer Function.md",
+    "Wireless Communication/Concepts/Transfer Function.md",
+    "Wireless Communication/Concepts/Impulse Response.md",
+    "Wireless Communication/Figure/Narrowband and wideband systems.png",
+    "Wireless Communication/Figure/Scatterers located on the same ellipses lead to the same delays.png",
+    "Wireless Communication/Concepts/Inter Symbol Interference (ISI).md",
+    "Math Concepts/Rayleigh Distribution.md",
+    "Math Concepts/Gaussian Distribution.md",
+    "Math Concepts/Rice Distribution.md",
+    "Wireless Communication/Concepts/Small-Scale Fading.md",
+    "Wireless Communication/Concepts/Level Crossing Rate (LCR).md",
+    "Wireless Communication/Concepts/Large-Scale Fading.md",
+    "Wireless Communication/Concepts/Friis' Law.md",
+    "Wireless Communication/Concepts/Far field(Fraunhofer region).md",
+    "Wireless Communication/Concepts/Doppler Spectra.md",
+    "Wireless Communication/Concepts/Average Duration of Fades(ADF).md",
+    "Wireless Communication/Figure/Shadowing by a building.png",
+    "Wireless Communication/Figure/Small-Scale Fading with a Dominant Component.png",
+    "Wireless Communication/Figure/The d4 Power Law.png",
+    "Wireless Communication/Wireless Channel/EITN085-2025-A1-Fu-Wang.pdf",
+    "Wireless Communication/Figure/diffraction.png",
+    "Wireless Communication/Figure/Rayleigh fading channel.png",
+    "Wireless Communication/Figure/Jakes Doppler spectrum..png",
+    "Wireless Communication/Concepts/The $d^4$ Power Law.md",
+    "Convex Optimization/Convex Optimization.md",
+    "Wireless Communication/Concepts",
+    "Wireless Communication/Figure",
+    "Wireless Communication",
+    "未命名.canvas",
+    "Math Concepts",
+    "Wireless Communication/Information Theory/Hand in 2.pdf",
+    "Wireless Communication/Information Theory/Hand in 3.pdf",
+    "Convex Optimization/Figure",
+    "test.canvas",
+    "未命名 1.canvas",
+    "Untitled.canvas",
+    "Untitled 1.canvas"
+  ]
+}
