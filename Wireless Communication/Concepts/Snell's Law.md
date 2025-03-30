@@ -13,4 +13,27 @@ $$\rho_{\mathrm{TM}}=\frac{\sqrt{\delta_2}\cos\Theta_\mathrm{e}-\sqrt{\delta_1}\
  For TE polarization:
  $$\rho_{\mathrm{TE}}=\frac{\sqrt{\delta_1}\cos\left(\Theta_\mathrm{e}\right)-\sqrt{\delta_2}\cos\left(\Theta_\mathrm{t}\right)}{\sqrt{\delta_1}\cos\left(\Theta_\mathrm{e}\right)+\sqrt{\delta_2}\cos\left(\Theta_\mathrm{t}\right)}$$
  $$T_{\mathrm{TE}}=\frac{2\sqrt{\delta_1}\cos\left(\Theta_\mathrm{e}\right)}{\sqrt{\delta_1}\cos\left(\Theta_\mathrm{e}\right)+\sqrt{\delta_2}\cos\left(\Theta_\mathrm{t}\right)}$$
- 
+$$
+\sqrt{ T^2+\rho^2 }=1
+$$
+Transmission through layered structures
+
+Total transmission coefficient
+$$
+T=\frac{{T_{1}T_{2}e^{-j\alpha}}}{1+R_{1}R_{2}e^{-2j\alpha}}
+$$
+Total reflectrion coefficient
+$$
+\rho=\frac{{\rho_{1}\rho_{2}e^{-j2\alpha}}}{1+\rho_{1}\rho_{2}e^{-2j\alpha}}
+$$
+with the electrical length in the wall
+$$
+\alpha=\frac{{2\pi}}{\lambda}\sqrt{ \epsilon_{1} }d\cos(\Phi_{t})
+$$
+Wall with thickness d and two dielectrics
+$$
+T=\frac{E_{through}}{E_{i}}
+$$
+$$
+\rho=\frac{E_{reflect}}{E_{i}}
+$$

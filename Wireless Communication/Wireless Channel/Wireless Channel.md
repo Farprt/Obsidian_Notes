@@ -23,6 +23,27 @@ received power as a function of **LoS propagation distance** and transmit power
 > [!NOTE] [[Snell's Law]]
 > 
 
+Transmission through layered structures
+
+Total transmission coefficient
+$$
+T=\frac{{T_{1}T_{2}e^{-j\alpha}}}{1+R_{1}R_{2}e^{-2j\alpha}}
+$$
+Total reflectrion coefficient
+$$
+\rho=\frac{{\rho_{1}\rho_{2}e^{-j2\alpha}}}{1+\rho_{1}\rho_{2}e^{-2j\alpha}}
+$$
+with the electrical length in the wall
+$$
+\alpha=\frac{{2\pi}}{\lambda}\sqrt{ \epsilon_{1} }d\cos(\Phi_{t})
+$$
+Wall with thickness d and two dielectrics
+$$
+T=\frac{E_{through}}{E_{i}}
+$$
+$$
+\rho=\frac{E_{reflect}}{E_{i}}
+$$
 ## 1.3 Diffraction
 ![[diffraction.png]]
 $$
@@ -347,14 +368,147 @@ In practice, this is not possible: as the UE moves over larger distances, the me
   ![[Types of received power variations..png]]
 
 
-WSS also implies that components with different Doppler shifts undergo uncorrelated fading.
+WSS also implies that components with different Doppler shifts undergo uncorrelated fading. This can be shown by considering the Doppler-variant impulse response $s(\upsilon,t)$.
+$$
+R_{s}(\upsilon,\upsilon',\tau,\tau')=\hat{\hat{P_{s}}}(\upsilon,\tau,\tau')\delta(\upsilon-\upsilon')
+$$
+This implies that contributions undergo uncorrelated fading if they have different Doppler shifts.
+
+Analogously, we can write RB as:
+$$
+R_{B}(\upsilon,\upsilon',f,f')=P_{B}(\upsilon,f,f')\delta(\upsilon-\upsilon)
+$$
+
+### 3.3.2 [[Uncorrelated Scatterers (US)]]
+
+The US assumption is defined as “contributions with different delays are uncorrelated,” which is written mathematically as:
+$$
+R_{h}(t,t',\tau,\tau')=P_{h}(t,t',\tau)\delta(\tau-\tau')
+$$
+For the transfer function, the US condition means that $R_{H}$ does not depend on the absolute frequency, but only on the frequency difference:
+$$
+R_{H}(t,t',f,f+\Delta f)=R_{H}(t,t',\Delta f)
+$$
+This implies that the frequency correlation function is independent of the carrier frequency, and only depends on the frequency difference $\Delta f$ between the two considered frequencies.
+
+Again, it is obvious that this cannot hold for all frequencies – the correlation function at 100 MHz will be different from that at 100 GHz. We can thus define a stationarity bandwidth within which the US assumption is valid, while for larger changes in carrier frequency the assumption will not hold.
+
+### 3.3.3 WSSUS Assumption
+
+The US and WSS assumptions are duals: US defines contributions with different delays as uncorrelated, while WSS defines contributions with different Doppler shifts as uncorrelated. 
+
+Alternatively, we can state that US means that $R_{H}$ depends only on the frequency difference, while WSS means that $R_H$ depends only on the time difference.
+
+It is thus natural to combine these two definitions in the WSSUS condition, so that the ACF has to fulfill the following conditions:
+
+$$\begin{gathered}
+R_\mathrm{h}(t,t+\Delta t,\tau,\tau^{\prime})=P_\mathrm{h}(\Delta t,\tau)\delta(\tau-\tau^{\prime})\\
+R_\mathrm{H}(t,t+\Delta t,f,f+\Delta f)=R_\mathrm{H}(\Delta t,\Delta f)\\
+R_\mathrm{s}(\nu,\nu^{\prime},\tau,\tau^{\prime})=P_\mathrm{s}(\nu,\tau)\delta(\nu-\nu^{\prime})\delta(\tau-\tau^{\prime})\\
+R_{\mathrm{B}}(\nu,\nu^{\prime},f,f+\Delta f)=P_{\mathrm{B}}(\nu,\Delta f)\delta(\nu-\nu^{\prime})
+\end{gathered}$$
+In contrast to the ACFs, which depend on four variables, the P-functions on the r.h.s. depend only on two variables.
+
+Because of their importance, they have been given distinct names. Following [Kattenbach 1997], we define
+
+- $P_{h}(\Delta t,\tau)$: delay cross power spectral density
+- $P_{H}(\Delta t,\Delta f)$: time-frequency correlation function
+- $P_{s}(\upsilon,\tau)$: scattering function
+- $P_{B}(\upsilon,\Delta f)$: Doppler cross power spectral density
+
+The **scattering function** has special importance because it can be easily interpreted physically. If only single interactions occur, then each differential element of the scattering function corresponds to a physically existing IO. From the Doppler shift, we can determine the Direction Of Arrival (DoA); the delay determines the radii of the ellipse on which the scatterer lies.
+
+This assumption is violated as soon as the realization of the shadowing changes significantly (note that shadowing by moving objects, such as trucks blocking certain MPCs, also leads to violation
+of WSS). 
+Similarly, the US assumption requires that the small-scale-averaged RX power does not change over frequency; this assumption is violated when, e.g., the antenna gain or even just the antenna pattern changes significantly. 
+
+But the constraints of WSSUS go further: they require, e.g., **that the Power Delay Profile (PDP) does not change over time, which implies that the delays of the MPCs must not change significantly (i.e., more than a fraction of the resolvable delay bin) as the UE moves.**
+We can thus define a stationarity region, i.e., an area within which the WSS assumption is fulfilled. Note that this is fundamentally different from the coherence region, i.e., the area within which the impulse response is constant. Typically, the size of the coherence region is on the order of a wavelength (due to small-scale fading), while the stationarity region is determined by the shadowing correlation length, which is tens of meter or more. Similarly, the stationarity bandwidth is the bandwidth within which the US assumption is fulfilled, and can be much larger than the coherence bandwidth we will discuss below.
+
+## 3.4Condensed Parameters
+
+Integrating the scattering function over the Doppler shift ν gives the delay power spectral density $P_{h}(\tau)$, more popularly known as the Power Delay Profile (PDP). The PDP contains information about how much power (from a transmitted delta pulse with unit energy) arrives at the RX with a delay between $(\tau,\tau+d\tau)$ , irrespective of a possible Doppler shift. The PDP can be obtained from the complex impulse responses $h(t,\tau)$ as:
+$$
+P_{h}(\tau)=\lim_{ T \to \infty } \frac{1}{2T}\int_{-T}^T|h(t,\tau)|^2dt
+$$
+Analogously, integrating the scattering function $P_{s}(\upsilon,\tau)$ over $\tau$ results in the Doppler power spectral density $P_{B}(\upsilon)$
 
 
+The PDP is a function, but for obtaining a quick overview of measurement results, it is preferable to have each measurement campaign described by a single parameter.
 
+- delay-integrated power:
+$$
+P_{m}=\int_{-\infty}^{\infty}P_{h}(\tau)  \, d\tau
+$$
+- mean delay
+$$
+T_{m}=\frac{\int_{-\infty}^{\infty} P_{h}(\tau)\tau \, d\tau }{P_{m}}
+$$
+- rms delay spread
+$$
+S_{\tau}=\sqrt{ \frac{\int_{-\infty}^{\infty} P_{h}(\tau)\tau^2 \, d\tau }{P_{m}}-T_{m}^2 }
+$$
 
+Moments of the Doppler spectra can be computed in complete analogy to the moments of the PDP. 
+- integrated power:
+$$
+P_{B,m}=\int_{-\infty}^{\infty}P_{B}(\upsilon)  \, d\upsilon
+$$
+where obviously $P_{B,m}=P_{m}$
+- Doppler shift
+$$
+\upsilon_{m}=\frac{\int_{-\infty}^{\infty} P_{B}(\upsilon)\upsilon \, d\upsilon }{P_{B,m}}
+$$
+- rms Doppler spread
+$$
+S_{\upsilon}=\sqrt{ \frac{\int_{-\infty}^{\infty} P_{B}(\upsilon)\upsilon^2 \, d\tau }{P_{B,m}}-\upsilon_{m}^2 }
+$$
 
+The rms delay spread $S_{\tau}$ and the coherence bandwidth $B_{coh}$ are obviously related: Sτ is derived from the PDP $P_{h}(\tau)$ while $B_{coh}$ is obtained from the frequency correlation function, which is the FT of the PDP.
+$$
+B_{coh}\geq \frac{1}{2\pi S_{\tau}}
+$$
 
+The temporal correlation function is a measure of how fast a channel changes. The definition of the coherence time $T_{coh}$ is thus analogous to the coherence bandwidth; it also has an uncertain relationship with the rms Doppler spread.
 
+![[Relationships between system functions, correlation functions, and condensed parameters for ergodic channel impulse responses..png]]
 
+# 4. Channel Models
+Fading = free-space pathloss+larg-scale fading+small-scale fading
+## 4.1 Narrowband Models
+### 4.1.1 Free-space Pathloss
 
+### 4.1.2 Breakpoint Model
 
+### 4.1.3 Okumura-Hata Model
+
+### 4.1.4 COST 231-Walfish-Ikegami Model
+
+### 4.1.5Motley-keenan indoor model
+
+## 4.2 Wideband Models
+### 4.2.1 Tapped Delay Line
+### 4.2.2 Clustered Model
+### 4.2.3 The Saleh-Valenzuela Model
+### 4.2.4 COST 207 Model
+
+## 4.3 Directional Channel Models
+### 4.3.1 Generalized Tapped-Delay Line Models
+### 4.3.2 Geometry-Based Stochastic Channel Model(GSCM)
+
+# 5. Antenna
+
+# 6.Channel Sounding
+
+## 6.1 Time Domain Measurements
+
+## 6.2 Frequency Domain Measurements
+
+## 6.3 Directional Channel Measurements
+
+# 7. Positioning
+## 7.1 Angal of Arrival (AOA)-Based Positioning
+
+## 7.2 Received Signal Strength(RSS)-Based Positioning
+
+## Time-Based Positioning
